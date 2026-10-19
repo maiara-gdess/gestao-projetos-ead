@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Microsserviços - Gestão de Projetos</title>
+  <title>Fronteiras e evolução - Gestão de Projetos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
   <!-- ===== HEADER ===== -->
   <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo">Gestão de Projetos</a>
+      <a href="../index.html" class="logo">Gestão de Projetos</a>
 
       <nav class="nav">
         <a href="microsservicos.html" class="nav__link">Microsserviços</a>
@@ -26,10 +26,10 @@
 
   <main class="topic topic--long container">
     <!-- ===== INTRODUÇÃO ===== -->
-    <section class="topic__intro topic__intro--decorated">
+    <section class="topic_intro topic_intro--decorated">
       <div class="topic__head">
         <div class="topic__heading">
-          <h1 class="topic__title">Microserviços</h1>
+          <h1 class="topic__title">Fronteiras e evolução</h1>
           <span class="topic__dots" aria-hidden="true"></span>
         </div>
 
@@ -51,7 +51,7 @@
             <circle cx="250" cy="134" r="19"/>
           </g>
           <!-- nós -->
-          <rect class="topic__node topic__node--main" x="114" y="53" width="66" height="58" rx="12" fill="#f26d7d" stroke="#000" stroke-width="2"/>
+          <rect class="topic_node topic_node--main" x="114" y="53" width="66" height="58" rx="12" fill="#f26d7d" stroke="#000" stroke-width="2"/>
           <g fill="#fff" stroke="#000" stroke-width="2">
             <circle class="topic__node" cx="48" cy="38" r="18"/>
             <circle class="topic__node" cx="58" cy="132" r="15"/>
@@ -70,13 +70,7 @@
       </div>
 
       <p class="topic__text">
-        A ideia central apresentada por Martin Fowler é que, embora a arquitetura de microsserviços seja atrativa
-         pela promessa de maior modularidade e unidades menores de código, a transição para esse modelo traz sérias 
-         consequências operacionais. Gerenciar um ecossistema distribuído de pequenos serviços é consideravelmente mais 
-         complexo do que manter um único monólito. Por isso, uma organização não deve adotar microsserviços sem antes garantir 
-         pré-requisitos fundamentais de engenharia: a capacidade de provisionar servidores rapidamente via automação, um sistema 
-         de monitoramento robusto para detectar problemas técnicos e de negócio em tempo real, e pipelines para a implantação rápida de aplicações. 
-         Atender a essas exigências exige uma mudança cultural profunda rumo à abordagem DevOps, integrando estreitamente os times de desenvolvimento e operações.
+         Micro Frontends é uma arquitetura de software que divide a interface de uma aplicação em partes menores e independentes. Cada parte pode ser desenvolvida, testada e atualizada por uma equipe diferente, mantendo todas as funcionalidades integradas em um único sistema.
       </p>
     </section>
 
@@ -85,23 +79,14 @@
       <article class="pros-cons__card">
         <h2 class="pros-cons__title">Vantagens</h2>
         <p class="pros-cons__text">
-         A principal vantagem descrita e impulsionada por esse conceito é a garantia de uma modularidade real
-          e de uma evolução sustentável do software. O modelo permite que a organização cresça de forma gradual 
-          e segura, começando com apenas alguns microsserviços e aprendendo com o comportamento real do sistema em 
-          produção antes de expandir. Além disso, a exigência de estabelecer esses pré-requisitos força a empresa a 
-          elevar sua maturidade técnica geral, adotando práticas avançadas de automação, entrega contínua e cultura 
-          colaborativa que trazem ganhos de qualidade duradouros para qualquer projeto de tecnologia.
+         Facilita a divisão de tarefas entre equipes, permite o desenvolvimento simultâneo de diferentes funcionalidades e torna a manutenção e as atualizações mais independentes. Também possibilita que cada equipe utilize tecnologias adequadas às necessidades de seu módulo.
         </p>
       </article>
 
       <article class="pros-cons__card">
         <h2 class="pros-cons__title">Desvantagens</h2>
         <p class="pros-cons__text">
-          A principal desvantagem reside no aumento drástico da complexidade operacional que a arquitetura distribuída 
-          impõe desde o primeiro dia. O diagnóstico de falhas e o rastreamento de problemas em um ecossistema com múltiplos 
-          serviços fracamente acoplados tornam-se extremamente difíceis, exigindo capacidades de teste e monitoramento avançadas 
-          que muitas empresas não possuem. Consequentemente, tentar adotar microsserviços sem a devida maturidade técnica cria uma 
-          barreira de entrada muito alta, gerando instabilidade na produção, custos desnecessários e alto risco de fracasso no projeto.
+         Pode aumentar a complexidade do projeto, principalmente na integração entre os módulos. Também exige mais testes para evitar incompatibilidades, além de padrões bem definidos para manter a consistência visual e o funcionamento do sistema.
         </p>
       </article>
     </section>
@@ -113,18 +98,12 @@
       </svg>
       <h2 class="impact__title">Impacto na gestão do projeto</h2>
       <p class="impact__text">
-       O conceito afeta a gestão de projetos ao exigir investimentos significativos antes mesmo da entrega das 
-       primeiras funcionalidades do negócio. Em relação ao prazo e ao custo, ocorre um impacto inicial direto de 
-       encarecimento e desaceleração, pois a equipe precisa dedicar tempo e orçamento para construir a base de automação, 
-       pipelines e monitoramento necessária. Quanto à equipe, a gestão precisa lidar com uma reestruturação cultural para 
-       integrar desenvolvedores e operações sob a cultura DevOps, exigindo profissionais com capacidade de transitar por múltiplos 
-       repositórios e ferramentas. Por fim, em termos de riscos, o modelo reduz os riscos arquiteturais de longo prazo do sistema, 
-       mas eleva enormemente os riscos de execução e operação no curto prazo caso a empresa opte por ignorar os pré-requisitos técnicos antes do lançamento.
+       Essa arquitetura facilita o planejamento, a distribuição de responsabilidades e o acompanhamento das entregas, pois cada equipe pode trabalhar em um módulo específico. Isso pode acelerar o desenvolvimento e tornar os prazos mais flexíveis. Entretanto, o gerente de projetos precisa coordenar as equipes, acompanhar as dependências e garantir que os módulos sejam integrados corretamente, evitando atrasos e problemas de compatibilidade.
       </p>
     </section>
 
     <div class="topic__actions">
-      <a href="https://martinfowler.com/bliki/MicroservicePrerequisites.html" class="btn btn--large" target="_blank" rel="noopener">Ir para post original</a>
+      <a href="https://martinfowler.com/articles/micro-frontends.html" class="btn btn--large" target="_blank" rel="noopener">Ir para post original</a>
     </div>
   </main>
 
