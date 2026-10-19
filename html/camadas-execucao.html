@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Microsserviços - Gestão de Projetos</title>
+  <title>Camadas e execução - Gestão de Projetos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
     <section class="topic__intro topic__intro--decorated">
       <div class="topic__head">
         <div class="topic__heading">
-          <h1 class="topic__title">Microserviços</h1>
+          <h1 class="topic__title">Camadas e execução</h1>
           <span class="topic__dots" aria-hidden="true"></span>
         </div>
 
@@ -70,13 +70,7 @@
       </div>
 
       <p class="topic__text">
-        A ideia central apresentada por Martin Fowler é que, embora a arquitetura de microsserviços seja atrativa
-         pela promessa de maior modularidade e unidades menores de código, a transição para esse modelo traz sérias 
-         consequências operacionais. Gerenciar um ecossistema distribuído de pequenos serviços é consideravelmente mais 
-         complexo do que manter um único monólito. Por isso, uma organização não deve adotar microsserviços sem antes garantir 
-         pré-requisitos fundamentais de engenharia: a capacidade de provisionar servidores rapidamente via automação, um sistema 
-         de monitoramento robusto para detectar problemas técnicos e de negócio em tempo real, e pipelines para a implantação rápida de aplicações. 
-         Atender a essas exigências exige uma mudança cultural profunda rumo à abordagem DevOps, integrando estreitamente os times de desenvolvimento e operações.
+        Uma das formas mais utilizadas de organizar uma aplicação ou software é dividi-lo em camadas, sendo as principais: a apresentação (UI); a camada de lógica (negócios) e a camada de dados (acesso aos dados). Nesta postagem, Martin Fowler explora essa organização muito estimada para si, demostrando suas variações, como a possível adição de novas camadas intermediárias, como a comum camada Service, e a relação de dependência entre elas. Ademais, o autor explora as vantagens da disposição em camadas e reforça sua eficiente aplicação em sistemas simples, além de explorar o uso desse fundamento na gestão de projetos. 
       </p>
     </section>
 
@@ -85,24 +79,16 @@
       <article class="pros-cons__card">
         <h2 class="pros-cons__title">Vantagens</h2>
         <p class="pros-cons__text">
-         A principal vantagem descrita e impulsionada por esse conceito é a garantia de uma modularidade real
-          e de uma evolução sustentável do software. O modelo permite que a organização cresça de forma gradual 
-          e segura, começando com apenas alguns microsserviços e aprendendo com o comportamento real do sistema em 
-          produção antes de expandir. Além disso, a exigência de estabelecer esses pré-requisitos força a empresa a 
-          elevar sua maturidade técnica geral, adotando práticas avançadas de automação, entrega contínua e cultura 
-          colaborativa que trazem ganhos de qualidade duradouros para qualquer projeto de tecnologia.
+         As principais vantagens destacadas são a redução do escopo de atenção, a reutilização de módulos e a melhoria na testabilidade do sistema. Ao isolar as camadas, o desenvolvedor diminui a carga mental, concentrando-se em apenas uma etapa de cada vez. Esse desacoplamento também traz grande flexibilidade, permitindo reaproveitar a lógica de negócio em diferentes interfaces gráficas ou absorver mudanças na tecnologia de banco de dados com mínimo impacto. Por fim, a separação facilita a criação de testes automatizados mais diretos e eficientes, já que possibilita validar as regras da aplicação isoladamente, sem as limitações e a complexidade da interface visual.
         </p>
       </article>
 
       <article class="pros-cons__card">
         <h2 class="pros-cons__title">Desvantagens</h2>
         <p class="pros-cons__text">
-          A principal desvantagem reside no aumento drástico da complexidade operacional que a arquitetura distribuída 
-          impõe desde o primeiro dia. O diagnóstico de falhas e o rastreamento de problemas em um ecossistema com múltiplos 
-          serviços fracamente acoplados tornam-se extremamente difíceis, exigindo capacidades de teste e monitoramento avançadas 
-          que muitas empresas não possuem. Consequentemente, tentar adotar microsserviços sem a devida maturidade técnica cria uma 
-          barreira de entrada muito alta, gerando instabilidade na produção, custos desnecessários e alto risco de fracasso no projeto.
+          Essa arquitetura funciona bem para sistemas simples, mas quando o sistema cresce, manter essa divisão técnica no nível principal do projeto gera problemas. O ideal é dividir a raiz do projeto por módulos de negócio (domínios) e aplicar a separação em camadas dentro de cada módulo.
         </p>
+        <img src="../assets/layer_reorganization.png" alt="Ilustração da divisão por módulos de negócio" class="pros-cons__image">
       </article>
     </section>
 
@@ -113,18 +99,12 @@
       </svg>
       <h2 class="impact__title">Impacto na gestão do projeto</h2>
       <p class="impact__text">
-       O conceito afeta a gestão de projetos ao exigir investimentos significativos antes mesmo da entrega das 
-       primeiras funcionalidades do negócio. Em relação ao prazo e ao custo, ocorre um impacto inicial direto de 
-       encarecimento e desaceleração, pois a equipe precisa dedicar tempo e orçamento para construir a base de automação, 
-       pipelines e monitoramento necessária. Quanto à equipe, a gestão precisa lidar com uma reestruturação cultural para 
-       integrar desenvolvedores e operações sob a cultura DevOps, exigindo profissionais com capacidade de transitar por múltiplos 
-       repositórios e ferramentas. Por fim, em termos de riscos, o modelo reduz os riscos arquiteturais de longo prazo do sistema, 
-       mas eleva enormemente os riscos de execução e operação no curto prazo caso a empresa opte por ignorar os pré-requisitos técnicos antes do lançamento.
+      Em sua postagem, o autor aponta como um erro utilizar essa arquitetura como critério para a divisão de equipes. Embora essa abordagem pareça ideal à primeira vista por agrupar especialistas nas mesmas tecnologias, o modelo ideal exige uma troca constante entre os desenvolvedores para que todas as partes sejam construídas já considerando sua integração, o que não ocorre quando os times são isolados por camadas. Consequentemente, essa organização gera um risco de integração com alta probabilidade e grande impacto: se não for possível integrar as camadas, o sistema não gera um Produto Mínimo Viável (MVP), comprometendo diretamente a restrição tripla do gerenciamento de projetos. Sem a entrega dessa versão inicial, surge um atraso no cronograma que pode comprometer prazos contratuais e impactar o tempo. Como tempo também é dinheiro, o atraso eleva os custos operacionais além do orçado, afetando o custo. Para conter esses impactos de prazo e orçamento, muitas vezes torna-se necessário reduzir o escopo planejado. Por fim, a combinação desses três fatores culmina na degradação da qualidade do produto final entregue.
       </p>
     </section>
 
     <div class="topic__actions">
-      <a href="https://martinfowler.com/bliki/MicroservicePrerequisites.html" class="btn btn--large" target="_blank" rel="noopener">Ir para post original</a>
+      <a href="https://martinfowler.com/bliki/PresentationDomainDataLayering.html" class="btn btn--large" target="_blank" rel="noopener">Ir para post original</a>
     </div>
   </main>
 

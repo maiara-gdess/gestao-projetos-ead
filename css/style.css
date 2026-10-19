@@ -32,7 +32,7 @@ a {
 }
 
 .container {
-  max-width: 956px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 37px;
 }
@@ -291,6 +291,12 @@ a {
   border: 2px solid var(--black);
   border-radius: 16px;
   box-shadow: 10px 10px 0 var(--black);
+}
+
+.pros-cons__card img {
+  width: 50%;
+  display: block;
+  margin: 0 auto; 
 }
 
 .pros-cons__title {
