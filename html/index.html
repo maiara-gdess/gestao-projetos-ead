@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Projetos - Conceitos de Arquitetura de Software</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Gestão de Projetos</a>
+
+      <nav class="nav">
+        <a href="microsservicos.html" class="nav__link">Microsserviços</a>
+        <a href="fronteiras-evolucao.html" class="nav__link">Fronteiras e evolução</a>
+        <a href="camadas-execucao.html" class="nav__link">Camadas e execução</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero container">
+      <div class="hero__text">
+        <h1 class="hero__title">Conceitos de Arquitetura de Software</h1>
+        <p class="hero__info">
+          Atividade SENAI EAD - Gestão de projetos<br>
+          Orientador: Wesley Fioreze
+        </p>
+        <a href="#modelos" class="btn" id="btn-ver-modelos">Ver modelos</a>
+      </div>
+
+      <div class="hero__illustration">
+        <img src="../img/hero-notebook.png" alt="Ilustração de um notebook cercado por ícones de redes sociais" class="hero__image">
+      </div>
+    </section>
+
+    <!-- ===== SOBRE A EQUIPE ===== -->
+    <section class="about container">
+      <h2 class="section-title">Sobre a Equipe</h2>
+
+      <div class="about__box">
+        <p class="about__text">
+          A equipe é composta por três estudantes do 4º semestre de
+          Análise e Desenvolvimento de Sistemas:
+          <strong>Maiara Raquel Guedes Leite, Maria Clara de Toledo e Marina Laís Rosa.</strong>
+          A atividade foi desenvolvida para o EAD da disciplina de Gestão de Projetos,
+          com o objetivo de aplicar os conhecimentos adquiridos ao longo do curso.
+        </p>
+
+        <svg class="about__illustration" viewBox="0 0 180 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="140" cy="22" r="5" fill="#1a1a1a"/>
+          <circle cx="149" cy="17" r="2.5" fill="#1a1a1a"/>
+
+          <g fill="none" stroke="#1a1a1a" stroke-width="1.1">
+            <ellipse cx="88" cy="62" rx="85" ry="15"/>
+            <ellipse cx="88" cy="84" rx="85" ry="15"/>
+            <ellipse cx="88" cy="110" rx="85" ry="15"/>
+          </g>
+
+          <!-- estrela cinza -->
+          <path d="M130 46 L135 72 L162 64 L139 80 L162 96 L135 88 L130 116 L125 88 L98 96 L121 80 L98 64 L125 72 Z" fill="#6b6b6b"/>
+          <!-- estrela rosa -->
+          <path d="M68 92 Q71 117 98 120 Q71 123 68 152 Q65 123 38 120 Q65 117 68 92 Z" fill="#f26d7d"/>
+
+          <circle cx="166" cy="134" r="2.5" fill="#1a1a1a"/>
+          <circle cx="176" cy="135" r="5" fill="#f26d7d"/>
+          <circle cx="173" cy="147" r="2.5" fill="#f26d7d"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===== MODELOS ===== -->
+    <section class="models container" id="modelos">
+      <h2 class="section-title section-title--models">Modelos</h2>
+
+      <div class="cards">
+        <a href="microsservicos.html" class="card">
+          <h3 class="card__title">Microserviços</h3>
+          <svg class="card__icon" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <g fill="none" stroke="#1a1a1a" stroke-width="5">
+              <circle cx="14" cy="15" r="10"/>
+              <polygon points="49,5 60,24 38,24" stroke-linejoin="miter"/>
+              <rect x="5" y="39" width="20" height="20"/>
+              <path d="M42 58 L42 52 A12 12 0 1 1 56 52 L56 58"/>
+            </g>
+            <line x1="38" y1="67" x2="60" y2="67" stroke="#1a1a1a" stroke-width="5"/>
+          </svg>
+        </a>
+
+        <a href="fronteiras-evolucao.html" class="card">
+          <h3 class="card__title">Fronteiras e evolução</h3>
+          <svg class="card__icon" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="80" height="80" rx="3" fill="#000000"/>
+            <polyline points="10,52 28,34 40,46 62,24" fill="none" stroke="#ffffff" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+            <polyline points="48,22 66,20 64,38" fill="none" stroke="#ffffff" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+          </svg>
+        </a>
+
+        <a href="camadas-execucao.html" class="card">
+          <h3 class="card__title">Camadas e execução</h3>
+          <svg class="card__icon" viewBox="0 0 70 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <g fill="none" stroke="#1a1a1a" stroke-width="1.6">
+              <polygon points="35,2 68,62 2,62" stroke-linejoin="miter"/>
+              <line x1="23" y1="24" x2="47" y2="24"/>
+              <line x1="13" y1="42" x2="57" y2="42"/>
+            </g>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>Gestão de projetos SENAI EAD - 2026</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
